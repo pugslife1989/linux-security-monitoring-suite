@@ -24,8 +24,8 @@ A lightweight, automated security and infrastructure monitoring toolkit built on
 * **Solution:** Collects live **CPU, RAM, root disk (`/`), and network RX/TX metrics** every 5 minutes and renders a CSS-styled, auto-refreshing Apache status page (`/status.html`) for instant visual triage.
 
 ### 3. [Web-Based Network Scanner (`3-nmap-web-scanner/`)](3-nmap-web-scanner/)
-* **Challenge:** Helpdesk and junior IT staff often need to verify open ports after firewall updates or detect unauthorized "shadow IT" services, but granting everyone SSH access to run CLI scans increases security risk.
-* **Solution:** Wraps `nmap` port discovery inside a centralized Apache web interface, allowing authorized staff to run targeted port checks and view structured results directly in a browser.
+* **Challenge:** Manually auditing subnets for rogue devices or unexpected open ports is time-consuming, and non-CLI staff lack an easy way to view current network exposure without SSH access.
+* **Solution:** Automates scheduled `nmap` subnet sweeps via `cron` (`network_scan.sh`) and renders the latest host and port discovery results on a lightweight PHP/Apache dashboard (`network.php`) accessible from any browser.
 
 ---
 

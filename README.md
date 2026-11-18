@@ -17,7 +17,7 @@ A lightweight, automated security and infrastructure monitoring toolkit built on
 
 ### 1. [File Integrity Monitor (`1-file-integrity-monitor/`)](1-file-integrity-monitor/)
 * **Challenge:** Unauthorized users or compromised accounts can silently modify authentication files (`/etc/passwd`, `/etc/ssh/sshd_config`) to create backdoor access or weaken SSH security without triggering standard system errors.
-* **Solution:** Automates cryptographic **SHA-256 baseline verification** every 15 minutes via `cron` ,logging file discrepancies to /var/log/integrity.log
+* **Solution:** Automates cryptographic **SHA-256 baseline verification** every 15 minutes via `cron` ,logging file discrepancies to `/var/log/integrity.log`
 
 ### 2. [System Health Dashboard (`2-system-health-dashboard/`)](2-system-health-dashboard/)
 * **Challenge:** Runaway background processes or full disk partitions can degrade server performance or cause unexpected downtime if resource spikes go unnoticed.

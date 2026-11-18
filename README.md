@@ -41,7 +41,7 @@ A lightweight, automated security and infrastructure monitoring toolkit built on
 
 1. **Install dependencies:** `apache2`, `php`, `nmap`, `msmtp`, `msmtp-mta`, and `mailutils`.
 2. **Deploy scripts:** Copy `fim.sh` and `health.sh` to `/usr/local/bin/` with `chmod 700` ownership under `root`.
-3. **Schedule automation:** Add cron jobs under `sudo crontab -e` to run `health.sh` every 5 minutes and `fim.sh` every 15 minutes.
+3. **Schedule automation:** Add cron jobs under `sudo crontab -e` to run `health.sh`,`network_scan.sh` every 5 minutes and `fim.sh` every 15 minutes.
 
 ---
 

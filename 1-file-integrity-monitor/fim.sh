@@ -4,6 +4,7 @@ FILES=("/etc/passwd" "/etc/ssh/sshd_config")
 BASELINE="/var/lib/fim_baseline.sha256"
 LOGFILE="/var/log/integrity.log"
 
+#for exercise purpose only, add file hash to BASELINE if it doesnt exist. 
 if [ ! -f "$BASELINE" ]; then
 
 for files in "${FILES[@]}"; do
@@ -14,7 +15,7 @@ done
 
 else
 
-#RESULT=$(sha256sum -c "$BASELINE" 2>&1)
+#compare live file hash with the existing ones
 sha256sum -c "$BASELINE" --status 2>&1
 
 if [ $? -ne 0 ]; then
